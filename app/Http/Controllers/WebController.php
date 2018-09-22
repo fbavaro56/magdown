@@ -82,7 +82,15 @@ class WebController extends Controller
      * @return string
      */
     public static function showMagazine($magazine_id){
+
         $magazine = Magazine::find($magazine_id);
-        return view('magazine_details')->with('magazine',$magazine);
+
+        $magazines = Magazine::where('category_id','=',$magazine->category_id)
+            ->where('id','!=',$magazine->id)
+            ->take(4)
+            ->get();
+
+
+        return view('magazine_details')->with('magazine',$magazine)->with('magazines',$magazines);
     }
 }

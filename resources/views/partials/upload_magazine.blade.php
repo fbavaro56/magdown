@@ -64,10 +64,14 @@
                     </div>
                     <div class="checkbox">
                         <label>
-                            <input type="checkbox"> I accept the terms and conditions of use of Magdown
+                            <input type="checkbox" required> I accept that Magdown.net is in compliance with 17 U.S.C. 512 and the Digital Millennium Copyright Act (DMCA). It is our policy to respond to any infringement notices and take appropriate actions under the Digital Millennium Copyright Act (DMCA) and other applicable intellectual property laws. If your copyrighted material has been posted on pdfmagazines.net or if links to your copyrighted material are returned through our search engine and you want this material removed, just:
+                            Please contact us via e-mail, we will delete it as soon as we got the notify.
                         </label>
                     </div>
                     <button type="submit" class="btn btn-primary"><i class="fa fa-upload"></i> Upload Magazine</button>
+
+
+
                 </form>
             </div>
         </div>
