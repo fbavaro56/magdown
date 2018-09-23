@@ -12,25 +12,40 @@ class CategoriesTableSeeder extends Seeder
     public function run()
     {
         DB::table('categories')->insert([
-            'name' => 'auto',
-        ]);
-        DB::table('categories')->insert([
-            'name' => 'moto',
+            'name' => 'business & economics',
         ]);
         DB::table('categories')->insert([
             'name' => 'health',
         ]);
         DB::table('categories')->insert([
-            'name' => 'women',
+            'name' => 'Fashion',
         ]);
         DB::table('categories')->insert([
-            'name' => 'men',
+            'name' => 'food & cooking',
         ]);
         DB::table('categories')->insert([
-            'name' => 'kids',
+            'name' => 'travel',
         ]);
         DB::table('categories')->insert([
-            'name' => 'adult',
+            'name' => 'movies & music',
+        ]);
+        DB::table('categories')->insert([
+            'name' => 'technology & computer',
+        ]);
+        DB::table('categories')->insert([
+            'name' => 'sport & fitness',
+        ]);
+        DB::table('categories')->insert([
+            'name' => 'science & history',
+        ]);
+        DB::table('categories')->insert([
+            'name' => 'For men',
+        ]);
+        DB::table('categories')->insert([
+            'name' => 'home & interior',
+        ]);
+        DB::table('categories')->insert([
+            'name' => 'others',
         ]);
     }
 }
