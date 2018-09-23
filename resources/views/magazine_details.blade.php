@@ -14,7 +14,9 @@
                         <p class="text-mute">
                             Language: <b>{{\App\Language::find($magazine->language_id)->name}}</b>
                         </p>
-                        <a class="btn btn-primary" target="_blank" href="{{url('uploads/pdf/'.$magazine->id.'.pdf')}}"> <i class="fa fa-download"></i> Download Magazine</a>
+                        @foreach($magazine->links as $link)
+                            <a class="btn btn-primary" style="margin-top: 10px" target="_blank" href="{{$link->url}}"> <i class="fa fa-download"></i> Download Magazine</a>
+                        @endforeach
                     </div>
                 </div>
             </div>

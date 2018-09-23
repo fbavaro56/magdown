@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Intervention\Image\Facades\Image;
+use phpDocumentor\Reflection\DocBlock\Tags\Link;
 
 class HomeController extends Controller
 {
@@ -72,8 +73,9 @@ class HomeController extends Controller
             'publication_date' => 'required',
             'category' => 'required',
             'language' => 'required',
-            'pdf_file' => 'required|mimes:pdf',
-            'img_file' => 'required|mimes:jpg,jpeg,png'
+//            'pdf_file' => 'required|mimes:pdf',
+            'img_file' => 'required|mimes:jpg,jpeg,png',
+            'links.0' => 'required'
         ]);
 
 
@@ -107,7 +109,24 @@ class HomeController extends Controller
 
             $magazine = Magazine::where('user_id','=',Auth::user()->id)->get()->last();
 
-            $request->file('pdf_file')->move('uploads/pdf', $magazine->id.'.pdf');
+
+            //En vez de recibir pdf creamos enlaces
+            //Chequeamos los 4 enlaces, si existe url lo creamos
+            foreach ($request->input('links') as $link) {
+                // Creamos el nuevo link relacionado a la revista
+                if($link != ""){
+                    $new_link = new \App\Link();
+                    $new_link->magazine_id = $magazine->id;
+                    $new_link->url = $link;
+                    $new_link->save();
+                }
+
+            }
+
+
+
+            //Desactivamos recibir pdf
+//            $request->file('pdf_file')->move('uploads/pdf', $magazine->id.'.pdf');
 
             $img = Image::make($request->file('img_file'));
             $img->fit(500,655);

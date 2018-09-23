@@ -47,20 +47,59 @@
                     </div>
 
                     <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="exampleInputFile">Magazine PDF file</label>
-                                <input type="file" name="pdf_file" id="exampleInputFile">
-                                <p class="help-block">Only PDF files</p>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
+                        {{--<div class="col-md-6">--}}
+                            {{--<div class="form-group">--}}
+                                {{--<label for="exampleInputFile">Magazine PDF file</label>--}}
+                                {{--<input type="file" name="pdf_file" id="exampleInputFile">--}}
+                                {{--<p class="help-block">Only PDF files</p>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                        <div class="col-md-12">
                             <div class="form-group">
                                 <label for="exampleInputFile">Magazine Image Cover</label>
                                 <input type="file" name="img_file">
                                 <p class="help-block">Only JPG, JPEG, PNG files.</p>
                             </div>
                         </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="link_1">Link</label>
+                                <input type="text" class="form-control" name="links[]" placeholder="date">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="link_1">Link</label>
+                                <input type="text" class="form-control" name="links[]" placeholder="date">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="link_1">Link</label>
+                                <input type="text" class="form-control" name="links[]" placeholder="date">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="link_1">Link</label>
+                                <input type="text" class="form-control" name="links[]" placeholder="date">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="link_1">Link</label>
+                                <input type="text" class="form-control" name="links[]" placeholder="date">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="link_1">Link</label>
+                                <input type="text" class="form-control" name="links[]" placeholder="date">
+                            </div>
+                        </div>
+
                     </div>
                     <div class="checkbox">
                         <label>

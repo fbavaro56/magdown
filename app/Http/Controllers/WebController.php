@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use App\Language;
+use App\Link;
 use App\Magazine;
 use Illuminate\Http\Request;
 
@@ -84,6 +85,7 @@ class WebController extends Controller
     public static function showMagazine($magazine_id){
 
         $magazine = Magazine::find($magazine_id);
+        $magazine->links = Link::where('magazine_id','=',$magazine_id)->get();
 
         $magazines = Magazine::where('category_id','=',$magazine->category_id)
             ->where('id','!=',$magazine->id)
