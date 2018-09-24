@@ -16,7 +16,7 @@ class WebController extends Controller
 {
     public static function index(){
 
-        $magazines = DB::table('magazines')->paginate(20);
+        $magazines = DB::table('magazines')->orderBy('created_at','desc')->paginate(20);
 
         return view('welcome')
             ->with('magazines',$magazines)

@@ -32,9 +32,9 @@ class HomeController extends Controller
     public function index($error2 = null)
     {
         if(Auth::user()->rol == 1){
-            $magazines = DB::table('magazines')->paginate(8);
+            $magazines = DB::table('magazines')->orderBy('created_at','desc')->paginate(8);
         }else{
-            $magazines = DB::table('magazines')->where('user_id','=',Auth::user()->id)->paginate(8);
+            $magazines = DB::table('magazines')->where('user_id','=',Auth::user()->id)->orderBy('created_at','desc')->paginate(8);
         }
 
         return view('home')
